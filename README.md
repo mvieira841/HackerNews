@@ -115,7 +115,7 @@ The project utilizes **GitHub Actions** for robust continuous integration and de
 ### 💻 Running Locally
 1. Clone the repository:
 ```bash
-   git clone [https://github.com/mvieira841/HackerNews.git](https://github.com/mvieira841/HackerNews.git)
+   git clone https://github.com/mvieira841/HackerNews.git
    cd HackerNews
 ```
 
