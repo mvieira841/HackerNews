@@ -1,0 +1,27 @@
+### Variables
+@HTTP_Host = http://localhost:5000
+@HTTPS_Host = https://localhost:5001
+@Local_HTTP = http://localhost:5105
+@Local_HTTPS = https://localhost:7059
+
+### 1. Get Best Stories (via Docker HTTP)
+GET {{HTTP_Host}}/api/v1/best-stories?n=10
+Accept: application/json
+
+### 2. Get Best Stories (via Docker HTTPS)
+GET {{HTTPS_Host}}/api/v1/best-stories?n=10
+Accept: application/json
+
+### 3. Liveness Probe
+GET {{HTTP_Host}}/health/live
+
+### 4. Readiness Probe (Checks Redis Connectivity)
+GET {{HTTP_Host}}/health/ready
+
+### 5. Application Metrics
+GET {{HTTP_Host}}/metrics
+Accept: application/json
+
+### 6. Validation Test (Missing 'n' parameter)
+GET {{HTTP_Host}}/api/v1/best-stories
+Accept: application/json
